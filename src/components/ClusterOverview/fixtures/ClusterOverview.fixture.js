@@ -3,7 +3,7 @@ import React from 'react';
 import { ClusterOverview as ClusterOverviewComponent } from '../ClusterOverview';
 import { healthData } from '../Health/fixtures/Health.fixture';
 import { eventsData } from '../Events/fixtures/Events.fixture';
-import { consumersData } from '../TopConsumers/fixtures/TopConsumers.fixture';
+import { consumersData } from '../TopConsumers/fixtures/ClusterTopConsumers.fixture';
 import { inventoryData } from '../Inventory/fixtures/Inventory.fixture';
 import { capacityStats } from '../Capacity/fixtures/Capacity.fixture';
 import { clusterDetailsData } from '../Details/fixtures/ClusterDetails.fixture';
@@ -42,7 +42,7 @@ export default [
       complianceData: { loaded: false },
       eventsData: { loaded: false },
       utilizationStats: { loaded: false },
-      consumersData: { loaded: false },
+      consumersData: {},
       inventoryData: { loaded: false },
     },
   },
