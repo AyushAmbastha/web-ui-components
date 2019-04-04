@@ -10,21 +10,25 @@ exports[`<Health /> renders correctly 1`] = `
     <h2
       class="card-pf-title"
     >
-      Cluster Health
+      Health
     </h2>
   </div>
   <div
-    class="card-pf-body kubevirt-health__body"
+    class="card-pf-body ocs-ocshealth__row-status-item"
   >
     <div
-      class="kubevirt-health__icon--error"
+      class="ocs-health__icon--ok"
     >
       <span
         aria-hidden="true"
-        class="fa fa-exclamation-circle"
+        class="fa fa-check-circle fa-2x"
       />
     </div>
-    Error message
+    <span
+      class="ocs-ocshealth__row-status-item-text"
+    >
+      OCS is Healthy
+    </span>
   </div>
 </div>
 `;

@@ -26,7 +26,7 @@ exports[`<Details /> renders correctly 1`] = `
         class="kubevirt-detail__item-value"
       >
         <span>
-          clusterName.clusterDoman
+          rook-ceph
         </span>
       </dd>
       <dt
@@ -38,31 +38,19 @@ exports[`<Details /> renders correctly 1`] = `
         class="kubevirt-detail__item-value"
       >
         <span>
-          AWS
+          Ceph
         </span>
       </dd>
       <dt
         class="kubevirt-detail__item-title"
       >
-        RHHI version
+        OCS version
       </dt>
       <dd
         class="kubevirt-detail__item-value"
       >
         <span>
-          1.0
-        </span>
-      </dd>
-      <dt
-        class="kubevirt-detail__item-title"
-      >
-        Openshift version
-      </dt>
-      <dd
-        class="kubevirt-detail__item-value"
-      >
-        <span>
-          v4.0.0
+          4.1
         </span>
       </dd>
     </dl>
