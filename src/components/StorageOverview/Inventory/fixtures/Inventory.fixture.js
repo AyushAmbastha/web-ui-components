@@ -1,6 +1,5 @@
 import { Inventory } from '../Inventory';
-import { nodes, pvcs, pvs, pods, vms, migrations } from '../../fixtures/StorageOverview.fixture';
-import { cephCluster } from '../../Details/fixtures/Details.fixture';
+import { nodes, pvcs, pvs, pods, vms, vmis, migrations } from '../../fixtures/StorageOverview.fixture';
 
 export default [
   {
@@ -11,7 +10,7 @@ export default [
       pvs,
       pods,
       vms,
-      cephCluster,
+      vmis,
       migrations,
     },
   },
