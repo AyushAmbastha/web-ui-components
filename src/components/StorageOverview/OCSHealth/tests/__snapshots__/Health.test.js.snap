@@ -14,10 +14,10 @@ exports[`<Health /> renders correctly 1`] = `
     </h2>
   </div>
   <div
-    class="card-pf-body ocs-ocshealth__row-status-item"
+    class="card-pf-body kubevirt-ocs-health__row-status-item"
   >
     <div
-      class="ocs-health__icon--ok"
+      class="kubevirt-ocs-health__icon--ok"
     >
       <span
         aria-hidden="true"
@@ -25,7 +25,7 @@ exports[`<Health /> renders correctly 1`] = `
       />
     </div>
     <span
-      class="ocs-ocshealth__row-status-item-text"
+      class="kubevirt-ocs-health__row-status-item-text"
     >
       OCS is Healthy
     </span>

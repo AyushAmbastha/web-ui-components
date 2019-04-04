@@ -17,7 +17,11 @@ export const OCSHealth = ({ data, loaded }) => (
     <DashboardCardHeader>
       <DashboardCardTitle>Health</DashboardCardTitle>
     </DashboardCardHeader>
-    <DashboardCardBody className="ocs-ocshealth__row-status-item" isLoading={!loaded} LoadingComponent={InlineLoading}>
+    <DashboardCardBody
+      className="kubevirt-ocs-health__row-status-item"
+      isLoading={!loaded}
+      LoadingComponent={InlineLoading}
+    >
       <HealthBody data={data} />
     </DashboardCardBody>
   </DashboardCard>

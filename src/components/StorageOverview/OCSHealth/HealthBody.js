@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import { Icon } from 'patternfly-react';
 
 const healtyIcon = (
-  <div className="ocs-health__icon--ok">
+  <div className="kubevirt-ocs-health__icon--ok">
     <Icon type="fa" size="2x" name="check-circle" />
   </div>
 );
 
 const errorIcon = (
-  <div className="ocs-health__icon--error">
+  <div className="kubevirt-ocs-health__icon--error">
     <Icon type="fa" size="2x" name="exclamation-circle" />
   </div>
 );
 
 const warningIcon = (
-  <div className="ocs-health__icon--warning">
+  <div className="kubevirt-ocs-health__icon--warning">
     <Icon type="fa" size="2x" name="exclamation-triangle" />
   </div>
 );
@@ -38,7 +38,7 @@ const OCSHealthMap = {
 const HealthBody = ({ data }) => (
   <React.Fragment>
     {OCSHealthMap[data.healthy].icon}
-    <span className="ocs-ocshealth__row-status-item-text">{OCSHealthMap[data.healthy].message}</span>
+    <span className="kubevirt-ocs-health__row-status-item-text">{OCSHealthMap[data.healthy].message}</span>
   </React.Fragment>
 );
 
