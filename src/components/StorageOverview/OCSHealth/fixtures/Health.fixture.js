@@ -1,4 +1,4 @@
-import { Health } from '../Health';
+import { OCSHealth } from '../Health';
 
 export const ocsHealthData = {
   data: {
@@ -10,7 +10,7 @@ export const ocsHealthData = {
 
 export default [
   {
-    component: Health,
+    component: OCSHealth,
     props: { ...ocsHealthData },
   },
 ];

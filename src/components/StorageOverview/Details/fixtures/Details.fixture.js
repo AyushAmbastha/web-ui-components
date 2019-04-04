@@ -1,4 +1,4 @@
-import { Details } from '../Details';
+import { StorageDetails } from '../Details';
 
 
 export const cephCluster = [
@@ -12,11 +12,11 @@ export const cephCluster = [
 
 export default [
   {
-    component: Details,
+    component: StorageDetails,
     props: { cephCluster },
   },
   {
-    component: Details,
+    component: StorageDetails,
     name: 'Loading cluster details',
   },
 ];
