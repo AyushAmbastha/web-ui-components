@@ -1,8 +1,8 @@
 import { Health } from '../Health';
 
-export const healthData = {
+export const ocsHealthData = {
   data: {
-    healthy: false,
+    healthy: 0,
     message: 'Error message',
   },
   loaded: true,
@@ -11,6 +11,6 @@ export const healthData = {
 export default [
   {
     component: Health,
-    props: { ...healthData },
+    props: { ...ocsHealthData },
   },
 ];

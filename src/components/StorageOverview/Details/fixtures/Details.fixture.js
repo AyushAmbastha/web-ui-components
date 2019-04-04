@@ -1,25 +1,19 @@
 import { Details } from '../Details';
 
-export const clusterDetailsData = {
-  openshiftClusterVersions: [
+
+export const cephCluster = [
     {
-      metric: {
-        gitVersion: 'v4.0.0',
+      metadata: {
+        name: 'rook-ceph',
       },
     },
-  ],
-  infrastructure: {
-    status: {
-      platform: 'AWS',
-      apiServerURL: 'https://api.clusterName.clusterDoman',
-    },
-  },
-};
+];
+
 
 export default [
   {
     component: Details,
-    props: clusterDetailsData,
+    props: { cephCluster },
   },
   {
     component: Details,
