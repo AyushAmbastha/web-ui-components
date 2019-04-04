@@ -3,8 +3,9 @@ import React from 'react';
 import { StorageOverview as StorageOverviewComponent } from '../StorageOverview';
 import { cephCluster } from '../Details/fixtures/Details.fixture';
 import { ocsHealthData } from '../OCSHealth/fixtures/Health.fixture';
+import { capacityStats } from '../Capacity/fixtures/Capacity.fixture';
 
-import { ClusterOverviewContext } from '../../ClusterOverview/ClusterOverviewContext';
+import { StorageOverviewContext } from '../StorageOverviewContext';
 
 import { localhostNode } from '../../../tests/mocks/node';
 import { cloudInitTestPod } from '../../../tests/mocks/pod/cloudInitTestPod.mock';
@@ -23,9 +24,9 @@ export const migrations = [];
 export const pvs = persistentVolumes;
 
 const StorageOverview = props => (
-  <ClusterOverviewContext.Provider value={props}>
+  <StorageOverviewContext.Provider value={props}>
     <StorageOverviewComponent />
-  </ClusterOverviewContext.Provider>
+  </StorageOverviewContext.Provider>
 );
 
 export default [
@@ -34,6 +35,7 @@ export default [
     props: {
       cephCluster,
       ocsHealthData,
+      capacityStats,
       nodes,
       pvcs,
       pvs,

@@ -9,7 +9,7 @@ import {
 } from '../../Dashboard/DashboardCard';
 import HealthBody from './HealthBody';
 // import TaskBody from './TaskBody';
-import { ClusterOverviewContextGenericConsumer } from '../../ClusterOverview/ClusterOverviewContext';
+import { StorageOverviewContextGenericConsumer } from '../StorageOverviewContext';
 import { InlineLoading } from '../../Loading';
 
 export const OCSHealth = ({ data, loaded }) => (
@@ -37,7 +37,7 @@ OCSHealth.propTypes = {
 };
 
 const OCSHealthConnected = () => (
-  <ClusterOverviewContextGenericConsumer Component={OCSHealth} dataPath="ocsHealthData" />
+  <StorageOverviewContextGenericConsumer Component={OCSHealth} dataPath="ocsHealthData" />
 );
 
 export default OCSHealthConnected;
