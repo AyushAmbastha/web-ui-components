@@ -8,7 +8,7 @@ import {
   DashboardCardHeader,
   DashboardCardTitle,
 } from '../../Dashboard/DashboardCard';
-import { ClusterOverviewContext } from '../../ClusterOverview/ClusterOverviewContext';
+import { StorageOverviewContext } from '../StorageOverviewContext';
 import { InlineLoading } from '../../Loading';
 import { DetailItem } from '../../Dashboard/Details/DetailItem';
 import { DetailsBody } from '../../Dashboard/Details/DetailsBody';
@@ -62,5 +62,5 @@ StorageDetails.propTypes = {
 };
 
 export const StorageDetailsConnected = () => (
-  <ClusterOverviewContext.Consumer>{props => <StorageDetails {...props} />}</ClusterOverviewContext.Consumer>
+  <StorageOverviewContext.Consumer>{props => <StorageDetails {...props} />}</StorageOverviewContext.Consumer>
 );
