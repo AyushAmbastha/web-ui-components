@@ -9,6 +9,7 @@ import { ClusterOverviewContext } from '../../ClusterOverview/ClusterOverviewCon
 import { localhostNode } from '../../../tests/mocks/node';
 import { cloudInitTestPod } from '../../../tests/mocks/pod/cloudInitTestPod.mock';
 import { persistentVolumeClaims } from '../../../tests/mocks/persistentVolumeClaim';
+import { persistentVolumes } from '../../../tests/mocks/persistentVolume';
 import { cloudInitTestVm } from '../../../tests/mocks/vm/cloudInitTestVm.mock';
 import { fullVm } from '../../../tests/mocks/vm/vm.mock';
 
@@ -17,7 +18,7 @@ export const pvcs = persistentVolumeClaims;
 export const pods = [cloudInitTestPod];
 export const vms = [fullVm, cloudInitTestVm];
 export const migrations = [];
-export const pvs = [];
+export const pvs = persistentVolumes;
 
 
 const StorageOverview = props => (
