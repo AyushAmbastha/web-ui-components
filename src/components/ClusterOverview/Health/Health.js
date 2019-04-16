@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import {
   DashboardCard,
@@ -7,20 +8,50 @@ import {
   DashboardCardHeader,
   DashboardCardTitle,
 } from '../../Dashboard/DashboardCard';
-import HealthBody from './HealthBody';
 import { ClusterOverviewContextGenericConsumer } from '../ClusterOverviewContext';
 import { InlineLoading } from '../../Loading';
+import { HEALTHY, ERROR, UNKNOWN } from './strings';
+import { HealthItem } from '../../Dashboard/Health/HealthItem';
+import { HealthBody } from '../../Dashboard/Health/HealthBody';
 
-export const Health = ({ data, loaded }) => (
-  <DashboardCard>
-    <DashboardCardHeader>
-      <DashboardCardTitle>Cluster Health</DashboardCardTitle>
-    </DashboardCardHeader>
-    <DashboardCardBody className="kubevirt-health__body" isLoading={!loaded} LoadingComponent={InlineLoading}>
-      <HealthBody data={data} />
-    </DashboardCardBody>
-  </DashboardCard>
-);
+const HealthStatus = {
+  0: {
+    message: HEALTHY,
+    iconname: 'check-circle',
+    classname: 'ok',
+  },
+  1: {
+    message: ERROR,
+    iconname: 'exclamation-triangle',
+    classname: 'error',
+  },
+  2: {
+    message: UNKNOWN,
+    iconname: 'exclamation-triangle',
+    classname: 'error',
+  },
+};
+
+export const Health = ({ data, loaded }) => {
+  const value = get(data, 'healthy', '2');
+  const status = HealthStatus[value] || HealthStatus[2];
+  return (
+    <DashboardCard>
+      <DashboardCardHeader>
+        <DashboardCardTitle>Cluster Health</DashboardCardTitle>
+      </DashboardCardHeader>
+      <DashboardCardBody className="kubevirt-health__body" isLoading={!loaded} LoadingComponent={InlineLoading}>
+        <HealthBody>
+          <HealthItem
+            message={data ? status.message : null}
+            icon={data ? status.iconname : null}
+            classname={data ? status.classname : null}
+          />
+        </HealthBody>
+      </DashboardCardBody>
+    </DashboardCard>
+  );
+};
 
 Health.defaultProps = {
   loaded: false,

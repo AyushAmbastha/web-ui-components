@@ -7,13 +7,8 @@ import { InlineLoading } from '../../Loading';
 export const HealthItem = ({ icon, classname, message, isLoading, LoadingComponent }) => {
   const description = isLoading ? <LoadingComponent /> : message;
   return (
-    <div className="kubevirt-dashboard-health__icon">
-      <Icon
-        type="fa"
-        size="2x"
-        name={icon}
-        className={`kubevirt-health__icon kubevirt-dashboard-health__icon--${classname}`}
-      />
+    <div className="kubevirt-health__icon">
+      <Icon type="fa" size="2x" name={icon} className={`kubevirt-health__icon kubevirt-health__icon--${classname}`} />
       <span className="kubevirt-health__text">{description}</span>
     </div>
   );

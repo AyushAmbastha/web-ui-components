@@ -2,7 +2,7 @@ import { Health } from '../Health';
 
 export const healthData = {
   data: {
-    healthy: false,
+    healthy: 0,
     message: 'Error message',
   },
   loaded: true,

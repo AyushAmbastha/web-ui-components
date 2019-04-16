@@ -17,14 +17,18 @@ exports[`<Compliance /> renders correctly 1`] = `
     class="card-pf-body kubevirt-compliance__body"
   >
     <div
-      class="kubevirt-health__icon--ok kubevirt-health__icon"
+      class="kubevirt-health__icon"
     >
       <span
         aria-hidden="true"
-        class="fa fa-check-circle"
+        class="fa fa-check-circle kubevirt-health__icon--ok"
       />
+      <span
+        class="kubevirt-health__text"
+      >
+        All nodes compliant
+      </span>
     </div>
-    All nodes compliant
   </div>
 </div>
 `;

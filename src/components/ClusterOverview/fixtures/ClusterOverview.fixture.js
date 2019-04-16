@@ -7,8 +7,7 @@ import { consumersData } from '../TopConsumers/fixtures/TopConsumers.fixture';
 import { capacityStats } from '../Capacity/fixtures/Capacity.fixture';
 import { utilizationStats } from '../Utilization/fixtures/Utilization.fixture';
 import { clusterDetailsData } from '../Details/fixtures/Details.fixture';
-
-import { complianceData } from '..';
+import { complianceData } from '../Compliance/fixtures/Compliance.fixture';
 
 import { ClusterOverviewContext } from '../ClusterOverviewContext';
 

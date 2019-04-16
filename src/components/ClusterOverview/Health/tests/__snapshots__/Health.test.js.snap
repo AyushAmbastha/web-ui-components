@@ -17,14 +17,22 @@ exports[`<Health /> renders correctly 1`] = `
     class="card-pf-body kubevirt-health__body"
   >
     <div
-      class="kubevirt-health__icon--error kubevirt-health__icon"
+      class="kubevirt-health__body"
     >
-      <span
-        aria-hidden="true"
-        class="fa fa-exclamation-circle"
-      />
+      <div
+        class="kubevirt-health__icon"
+      >
+        <span
+          aria-hidden="true"
+          class="fa fa-check-circle fa-2x kubevirt-health__icon kubevirt-health__icon--ok"
+        />
+        <span
+          class="kubevirt-health__text"
+        >
+          Cluster is Healthy
+        </span>
+      </div>
     </div>
-    Error message
   </div>
 </div>
 `;

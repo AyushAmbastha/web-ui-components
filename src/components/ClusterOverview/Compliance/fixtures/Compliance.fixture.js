@@ -1,6 +1,12 @@
 import { Compliance } from '../Compliance';
 
-import { complianceData } from '../..';
+export const complianceData = {
+  data: {
+    healthy: true,
+    message: 'All nodes compliant',
+  },
+  loaded: true,
+};
 
 export default [
   {

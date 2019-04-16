@@ -7,7 +7,7 @@ import {
   DashboardCardHeader,
   DashboardCardTitle,
 } from '../../Dashboard/DashboardCard';
-import HealthBody from '../Health/HealthBody';
+import ComplianceBody from './ComplianceBody';
 import { ClusterOverviewContextGenericConsumer } from '../ClusterOverviewContext';
 import { InlineLoading } from '../../Loading';
 
@@ -17,7 +17,7 @@ export const Compliance = ({ data, loaded }) => (
       <DashboardCardTitle>Cluster Compliance</DashboardCardTitle>
     </DashboardCardHeader>
     <DashboardCardBody className="kubevirt-compliance__body" isLoading={!loaded} LoadingComponent={InlineLoading}>
-      <HealthBody data={data} />
+      <ComplianceBody data={data} />
     </DashboardCardBody>
   </DashboardCard>
 );

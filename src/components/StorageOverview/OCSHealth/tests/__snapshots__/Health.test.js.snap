@@ -20,11 +20,11 @@ exports[`<Health /> renders correctly 1`] = `
       class="kubevirt-health__body"
     >
       <div
-        class="kubevirt-dashboard-health__icon"
+        class="kubevirt-health__icon"
       >
         <span
           aria-hidden="true"
-          class="fa fa-check-circle fa-2x kubevirt-health__icon kubevirt-dashboard-health__icon--ok"
+          class="fa fa-check-circle fa-2x kubevirt-health__icon kubevirt-health__icon--ok"
         />
         <span
           class="kubevirt-health__text"

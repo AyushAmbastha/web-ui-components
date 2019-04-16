@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Health /> renders correctly 1`] = `
+exports[`<Compliance /> renders correctly 1`] = `
 <div
   class="card-pf kubevirt-dashboard__card"
 >
@@ -10,21 +10,25 @@ exports[`<Health /> renders correctly 1`] = `
     <h2
       class="card-pf-title kubevirt-dashboard__card-title"
     >
-      Cluster Health
+      Cluster Compliance
     </h2>
   </div>
   <div
-    class="card-pf-body kubevirt-health__body"
+    class="card-pf-body kubevirt-compliance__body"
   >
     <div
-      class="kubevirt-health__icon--error kubevirt-health__icon"
+      class="kubevirt-health__icon"
     >
       <span
         aria-hidden="true"
-        class="fa fa-exclamation-circle"
+        class="fa fa-check-circle kubevirt-health__icon--ok"
       />
+      <span
+        class="kubevirt-health__text"
+      >
+        All nodes compliant
+      </span>
     </div>
-    Error message
   </div>
 </div>
 `;
