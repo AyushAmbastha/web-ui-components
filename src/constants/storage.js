@@ -3,6 +3,11 @@ export const STORAGE_PROMETHEUS_QUERIES = {
   CEPH_STATUS_QUERY: 'ceph_health_status',
   STORAGE_CEPH_CAPACITY_TOTAL_QUERY: 'ceph_cluster_total_bytes',
   STORAGE_CEPH_CAPACITY_USED_QUERY: 'ceph_cluster_total_used_bytes',
+  STORAGE_CEPH_CAPACITY_REQUESTED_QUERY: 'kube_persistentvolumeclaim_resource_requests_storage_bytes',
+  STORAGE_CEPH_CAPACITY_VMS_QUERY:
+    '(sort(topk(5, sum(avg_over_time(kubelet_volume_stats_used_bytes[1h]) * on (namespace,persistentvolumeclaim) group_left(pod) kube_pod_spec_volumes_persistentvolumeclaims_info{pod=~"virt-launcher-.*"}) by (pod))))[10m:1m]',
+  STORAGE_CEPH_CAPACITY_PODS_QUERY:
+    '(sort(topk(5, sum(avg_over_time(kubelet_volume_stats_used_bytes[1h]) * on (namespace,persistentvolumeclaim) group_left(pod) kube_pod_spec_volumes_persistentvolumeclaims_info) by (pod))))[10m:1m]',
   CEPH_OSD_UP_QUERY: 'sum(ceph_osd_up)',
   CEPH_OSD_DOWN_QUERY: 'count(ceph_osd_up == 0.0) OR vector(0)',
 
